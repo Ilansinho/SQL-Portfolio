@@ -1,0 +1,4 @@
+-- DVDRental SQL Project
+-- Author: Ilan Landau
+-- Database: PostgreSQL (dvdrental)
+-- This file will store the queries developed during practice.
