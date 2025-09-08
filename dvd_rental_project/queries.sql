@@ -22,3 +22,13 @@ Group by payment.customer_id, first_name, last_name
 Order by SUM (amount) DESC
 LIMIT 10
 
+--4. Top categories per total rentals:
+Select category.category_id, name AS category_name, COUNT (*) AS total_rentals from rental
+JOIN inventory
+ON rental.inventory_id = inventory.inventory_id
+JOIN film_category
+ON inventory.film_id = film_category.film_id
+JOIN category
+ON film_category.category_id = category.category_id
+Group By category.category_id, name
+Order by total_rentals DESC
